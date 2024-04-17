@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="css/1_homepage.css">
+    <title>specific_jacket</title>
+    <link rel="stylesheet" href="css/3_specific_jacket.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Gelasio&display=swap');
     </style>
@@ -16,11 +16,6 @@
         @import url('https://fonts.googleapis.com/css2?family=Esteban&display=swap');
     </style>
     <script src="https://kit.fontawesome.com/3ad74a7a32.js" crossorigin="anonymous"></script>
-    <script type="module" src="script.js"></script>
-    <script type="module" src="settings.js"></script>
-
-    <!-- <script defer src="settings.js"></script> -->
-
 </head>
 
 <body>
@@ -76,42 +71,106 @@
     </nav>
 
 
-    <!--Bestseller section-->
-    <div class="top-info">
-        <h1>Best sellers</h1>
-    </div>
 
-    <section class="home">
 
-        <template id="product">
-            <a href="specific-jacket.html" class="row">
-                <img id="jacket-img" src="images/model9.jpg" alt="">
-                <div class="product-text">
-                    <h2>Light Feather</h2>
+    <!--Specific_jacket Body-->
+
+    <section class="jacket">
+        <div class="container">
+            <div class="img-col">
+                <img src="images/model1.jpg" id="MainImg" width="100%">
+                <div class="small-img-group">
+                    <div class="small-img-col">
+                        <img src="images/model1.jpg" width="100%">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="images/model1.jpg" width="100%">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="images/model1.jpg" width="100%">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="images/model1.jpg" width="100%">
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-col">
+                <h1>Runner's High</h1>
+                <h2>$89.00</h2>
+                <select>
+                    <option>Select Size</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                    <option>XXL</option>
+                </select>
+                <input type="number" value="1">
+                <a href="4_checkout_page.html" class="btn">Add to cart</a>
+                <h3>Product Details:</h3>
+                <p><i class="fa-solid fa-check"></i> Waterproof and breathable</p>
+                <p><i class="fa-solid fa-check"></i> Lightweight and packable</p>
+                <p><i class="fa-solid fa-check"></i> advanced wind-resistant technology</p> <br>
+                <p> Introducing our cutting-edge RainGuard Pro <br> Waterproof Jacket, designed to redefine your
+                    rainy-day experience.
+                    This versatile jacket boasts a state-of-the-art waterproof membrane, ensuring you stay dry and
+                    comfortable in the most challenging weather conditions. <br> <br>
+                    Its advanced design also provides an excellent grip, allowing you to confidently tackle any outdoor
+                    adventure, while the shock-absorbing properties ensure maximum comfort throughout the day.
+                    Crafted with a Phylon midsole, our RainGuard Pro offers superior support and cushioning, making it
+                    ideal for various activities.
+                    The TPR outsole enhances durability and traction, providing stability on slippery surfaces.
+                    The jacket features a classic lace-up design, allowing you to customize the fit to your preference.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- Featured products (You might also like this) -->
+
+        <div class="featured">
+            <h2>You might also like...</h2>
+            <div class="row">
+                <div class="featured-col">
+                    <img src="images/model5.jpg">
+                    <h3>Midnight Blue</h3>
+                    <h5>cutting-edge RainGuard Pro <br> Waterproof Jacket</h5>
+                    <p>$149.00</p>
                 </div>
 
-                <div class="detail">
-                    <h3></h3>
-                    <div class="color color-white"></div>
-                    <div class="color color-grey"></div>
-                    <div class="color color-darkblue"></div>
-                    <p>$169.00</p>
+                <div class="featured-col">
+                    <img src="images/model10.jpg">
+                    <h3>Cold Rain</h3>
+                    <h5>cutting-edge RainGuard Pro <br> Waterproof Jacket</h5>
+                    <p>$149.00</p>
                 </div>
-            </a>
 
-        </template>
+                <div class="featured-col">
+                    <img src="images/model2.jpg">
+                    <h3>Pacific blue</h3>
+                    <h5>cutting-edge RainGuard Pro <br> Waterproof Jacket</h5>
+                    <p>$89.00</p>
+                </div>
 
-        <div class="products">
+                <div class="featured-col">
+                    <img src="images/model7.jpg">
+                    <h3>Summer Rain</h3>
+                    <h5>cutting-edge RainGuard Pro <br> Waterproof Jacket</h5>
+                    <p>$119.00</p>
+                </div>
+
+            </div>
+
+
 
         </div>
+
     </section>
 
 
 
-    <!--New Arrival-->
-    <div class="top-info">
-        <h1>New Arrival</h1>
-    </div>
+
 
 
 
@@ -171,6 +230,8 @@
         </div>
 
     </footer>
+
+
 </body>
 
 </html>

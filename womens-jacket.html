@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="css/1_homepage.css">
+    <title>jacket_list</title>
+    <link rel="stylesheet" href="css/womensjacket.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Gelasio&display=swap');
     </style>
@@ -16,10 +16,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Esteban&display=swap');
     </style>
     <script src="https://kit.fontawesome.com/3ad74a7a32.js" crossorigin="anonymous"></script>
-    <script type="module" src="script.js"></script>
     <script type="module" src="settings.js"></script>
-
-    <!-- <script defer src="settings.js"></script> -->
+    <script type="module" src="../js/womensjacket.js"></script>
 
 </head>
 
@@ -76,24 +74,33 @@
     </nav>
 
 
-    <!--Bestseller section-->
+
+
+    <!--Jacket list-->
+
     <div class="top-info">
-        <h1>Best sellers</h1>
+        <h1>Womens Collection</h1>
+    </div>
+    <div class="filter">
+        <select id="">
+            <option>Default</option>
+            <option>Price Low to High</option>
+            <option>Price High to Low</option>
+        </select>
     </div>
 
-    <section class="home">
-
+    <section class="mens-collection">
         <template id="product">
-            <a href="specific-jacket.html" class="row">
-                <img id="jacket-img" src="images/model9.jpg" alt="">
+            <a href="3_specific_jacket.html" class="row">
+                <img id="mensImg" src="images/model13.jpg" alt="">
                 <div class="product-text">
-                    <h2>Light Feather</h2>
+                    <h2>Red October</h2>
                 </div>
 
                 <div class="detail">
-                    <h3></h3>
-                    <div class="color color-white"></div>
-                    <div class="color color-grey"></div>
+                    <h5></h5>
+                    <div class="color color-red"></div>
+                    <div class="color color-black"></div>
                     <div class="color color-darkblue"></div>
                     <p>$169.00</p>
                 </div>
@@ -104,14 +111,10 @@
         <div class="products">
 
         </div>
+
     </section>
 
 
-
-    <!--New Arrival-->
-    <div class="top-info">
-        <h1>New Arrival</h1>
-    </div>
 
 
 
@@ -171,6 +174,8 @@
         </div>
 
     </footer>
+
+
 </body>
 
 </html>

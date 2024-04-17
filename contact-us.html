@@ -4,23 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="css/1_homepage.css">
+    <title>contact_page</title>
+    <link rel="stylesheet" href="css/7_contact_page.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Gelasio&display=swap');
     </style>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&family=Montserrat:wght@100;200;400;600;700;800;900&family=Poppins:wght@200;300;400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&family=Montserrat:ital,wght@100;200;400;600;700;800;900&family=Poppins:wght@200;300;400;600;700&display=swap');
     </style>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Esteban&display=swap');
     </style>
     <script src="https://kit.fontawesome.com/3ad74a7a32.js" crossorigin="anonymous"></script>
-    <script type="module" src="script.js"></script>
-    <script type="module" src="settings.js"></script>
-
-    <!-- <script defer src="settings.js"></script> -->
-
 </head>
 
 <body>
@@ -30,7 +25,7 @@
         <div class="gradient">
         </div>
         <div class="logo flex">
-            <a href="index.html"><img src="images/RainyDays_Logo.png"></a>
+            <a href="index.html"><img src="images/RainyDays_Logo.png" alt=""></a>
         </div>
         <div class="navbar-icons flex">
             <div class="magnifying-glass">
@@ -76,42 +71,72 @@
     </nav>
 
 
-    <!--Bestseller section-->
-    <div class="top-info">
-        <h1>Best sellers</h1>
-    </div>
 
-    <section class="home">
 
-        <template id="product">
-            <a href="specific-jacket.html" class="row">
-                <img id="jacket-img" src="images/model9.jpg" alt="">
-                <div class="product-text">
-                    <h2>Light Feather</h2>
+
+
+    <!--contact_page-->
+
+
+
+    <section class="contact-body">
+        <div class="contact-us">
+            <h1>Contact Us</h1>
+            <div class="overlay"></div>
+            <img src="images/contact-us.jpg" alt="">
+        </div>
+
+        <div class="opening-hours">
+            <h2>Opening hours:</h2>
+            <p>Monday-Thursday: 08:00 AM - 20:00 PM <br>
+                Friday-Saturday: 08:00 AM - 16:00 PM <br>
+                Sunday: closed <br>
+                Telephone: +47 93056667 <br>
+                Email: rainy@days.com <br>
+                On weekdays, we aim to respond to your emails within 24 hours. <br></p>
+        </div>
+
+        <div class="visit-location">
+            <h2>Visit closest store to you!</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.9100553802425!2d10.77188099196786!3d59.91704007500873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416e5bed844b27%3A0x653ef5922c5d121b!2sMunch!5e0!3m2!1sen!2sno!4v1703077730014!5m2!1sen!2sno"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="send-mail">
+            <form>
+                <div class="input-group">
+                    <input type="text" class="con-input" id="name" required>
+                    <label for="name" class="con-label"><i class="fa-solid fa-person"></i> Your Name</label>
                 </div>
 
-                <div class="detail">
-                    <h3></h3>
-                    <div class="color color-white"></div>
-                    <div class="color color-grey"></div>
-                    <div class="color color-darkblue"></div>
-                    <p>$169.00</p>
+                <div class="input-group">
+                    <input type="text" class="con-input" id="number" required>
+                    <label for="number" class="con-label"><i class="fa-solid fa-phone"></i> Phone #</label>
                 </div>
-            </a>
 
-        </template>
+                <div class="input-group">
+                    <input type="email" class="con-input" id="email" required>
+                    <label for="email" class="con-label"><i class="fa-solid fa-envelope"></i> Email</label>
+                </div>
 
-        <div class="products">
+                <div class="input-group">
+                    <textarea id="message" rows="10" required></textarea>
+                    <label for="message" class="con-label"><i class="fa-solid fa-comments"></i> What is the
+                        fuss?</label>
+                </div>
+                <button type="submit"><i class="fa-solid fa-paper-plane"></i> SUBMIT</button>
+            </form>
 
         </div>
+
+
     </section>
 
 
 
-    <!--New Arrival-->
-    <div class="top-info">
-        <h1>New Arrival</h1>
-    </div>
+
 
 
 

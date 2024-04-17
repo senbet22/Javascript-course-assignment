@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="css/1_homepage.css">
+    <title>checkout-page</title>
+    <link rel="stylesheet" href="css/4_checkout_page.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Gelasio&display=swap');
     </style>
@@ -16,11 +16,6 @@
         @import url('https://fonts.googleapis.com/css2?family=Esteban&display=swap');
     </style>
     <script src="https://kit.fontawesome.com/3ad74a7a32.js" crossorigin="anonymous"></script>
-    <script type="module" src="script.js"></script>
-    <script type="module" src="settings.js"></script>
-
-    <!-- <script defer src="settings.js"></script> -->
-
 </head>
 
 <body>
@@ -76,43 +71,102 @@
     </nav>
 
 
-    <!--Bestseller section-->
-    <div class="top-info">
-        <h1>Best sellers</h1>
-    </div>
+    <!--Checkout body-->
 
-    <section class="home">
+    <section class="checkout-page">
+        <h1>Cart</h1>
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="images/model1.jpg">
+                        <div>
+                            <p>Runner's High Large</p>
+                            <small>Price: $89.00</small>
+                            <br>
+                            <a href=""><i class="fa-solid fa-xmark"></i> Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>$89.00</td>
 
-        <template id="product">
-            <a href="specific-jacket.html" class="row">
-                <img id="jacket-img" src="images/model9.jpg" alt="">
-                <div class="product-text">
-                    <h2>Light Feather</h2>
-                </div>
+            </tr>
 
-                <div class="detail">
-                    <h3></h3>
-                    <div class="color color-white"></div>
-                    <div class="color color-grey"></div>
-                    <div class="color color-darkblue"></div>
-                    <p>$169.00</p>
-                </div>
-            </a>
 
-        </template>
+        </table>
 
-        <div class="products">
+        <div class="total-price">
+            <table>
+                <tr>
+                    <td>Subtotal</td>
+                    <td>$89.00</td>
+
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td>$00.00</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>$89.00</td>
+                </tr>
+            </table>
 
         </div>
+
+
+        <!-- Shipping Details -->
+        <form class="shipping-details">
+            <h2>Shipping details:</h2>
+            <hr class="under-line">
+            <div class="shipping-choice">
+                <div class="box-1"><i class="fa-solid fa-check"></i> Delivery</div>
+                <div class="box-2">Pick-Up</div>
+            </div>
+
+
+            <input type="text" class="input-field" placeholder="Name" required>
+            <input type="text" class="input-field" placeholder="Last name" required>
+            <input type="text" class="input-field" placeholder="Email" required>
+            <input type="text" class="input-field" placeholder="Phone number" required>
+            <input type="text" class="input-field" placeholder="ZIP CODE" required>
+            <input type="text" class="input-field" placeholder="CITY/TOWN" required>
+            <input type="text" class="input-field" placeholder="State" required>
+            <input type="text" class="input-field" placeholder="Region" required>
+            <input type="text" class="input-field" placeholder="Adress 1" required>
+            <input type="text" class="input-field" placeholder="Adress 2" required>
+
+            <a href="5_checkout_success.html" class="btn">Proceed to Checkout</a>
+        </form>
+
+        <form class="payment-method">
+            <h2>Payment method:</h2>
+            <hr class="under-line">
+            <div class="payment-options">
+                <i class="fa-brands fa-cc-visa"></i>
+                <i class="fa-brands fa-cc-paypal"></i>
+                <i class="fa-brands fa-cc-mastercard"></i>
+                <i class="fa-brands fa-apple-pay"></i>
+            </div>
+            <input type="number" class="input-field" placeholder="Card number" required>
+            <input type="number" class="small-field" placeholder="month" required>
+            <input type="number" class="small-field" placeholder="Year" required>
+            <input type="text" class="input-field" placeholder="Cardholder Name" required>
+            <input type="number" class="small-field" placeholder="CVV" required>
+            <p><input type="checkbox"> Join our newsletter and receive exclusive discounts and information about future
+                events!</p>
+
+
+
+        </form>
+
     </section>
-
-
-
-    <!--New Arrival-->
-    <div class="top-info">
-        <h1>New Arrival</h1>
-    </div>
-
 
 
     <!--Contact section (footer)-->

@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="css/1_homepage.css">
+    <title>checkout-success</title>
+    <link rel="stylesheet" href="css/5_checkout_success.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Gelasio&display=swap');
     </style>
@@ -15,12 +15,10 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Esteban&display=swap');
     </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
+    </style>
     <script src="https://kit.fontawesome.com/3ad74a7a32.js" crossorigin="anonymous"></script>
-    <script type="module" src="script.js"></script>
-    <script type="module" src="settings.js"></script>
-
-    <!-- <script defer src="settings.js"></script> -->
-
 </head>
 
 <body>
@@ -76,43 +74,63 @@
     </nav>
 
 
-    <!--Bestseller section-->
-    <div class="top-info">
-        <h1>Best sellers</h1>
-    </div>
 
-    <section class="home">
 
-        <template id="product">
-            <a href="specific-jacket.html" class="row">
-                <img id="jacket-img" src="images/model9.jpg" alt="">
-                <div class="product-text">
-                    <h2>Light Feather</h2>
-                </div>
 
-                <div class="detail">
-                    <h3></h3>
-                    <div class="color color-white"></div>
-                    <div class="color color-grey"></div>
-                    <div class="color color-darkblue"></div>
-                    <p>$169.00</p>
-                </div>
-            </a>
 
-        </template>
+    <!--Checkout_success-->
 
-        <div class="products">
+    <section class="checkout-success">
+        <hr class="under-line">
+        <div class="thank-you">
+            <div class="text">
+                <h1>Thank you for your purchase!</h1>
+                <p>Your order number is: #0004465</p>
+            </div>
 
+            <div class="icon"><i class="fa-solid fa-circle-check"></i></div>
         </div>
+
+        <div class="big-box">
+            <h1>Product</h1>
+            <div class="product-details">
+                <div class="row-1">
+                    <p>Runner's Dream: Large</p>
+                    <p>Quantity: 1</p>
+                </div>
+
+                <div class="row-2">
+                    <p>Shipping</p>
+                    <p class="color">Free</p>
+                </div>
+
+                <div class="row-3">
+                    <p>Total:</p>
+                    <p class="color">$89.00</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- small boxes -->
+
+        <div class="small-boxes">
+            <div class="box-1">
+                <h2>Shipping to:</h2>
+                <p>Lundliveien 5B,<br>0566 <br>Oslo, Norway</p>
+            </div>
+
+            <div class="box-2">
+                <h2>Expected delivery:</h2>
+                <p>7th june 2024</p>
+            </div>
+        </div>
+        <div class="button">
+            <a href="index.html" class="btn">Continue Shopping</a>
+        </div>
+        <hr class="under-line">
+
     </section>
-
-
-
-    <!--New Arrival-->
-    <div class="top-info">
-        <h1>New Arrival</h1>
-    </div>
-
 
 
     <!--Contact section (footer)-->
@@ -171,6 +189,8 @@
         </div>
 
     </footer>
+
+
 </body>
 
 </html>
