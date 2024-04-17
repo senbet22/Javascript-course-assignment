@@ -5,19 +5,15 @@ async function fetchProducts(url) {
   let data = await fetch(url);
   let products = await data.json();
   console.log(products);
+  return products;
+}
 
-
+export function displayProducts(products) {
   const container = document.querySelector('.products');
   container.innerHTML = '';
 
   for (let i = 0; i < products.length; i++) {
-    console.log(products[i]);
-
     const product = products[i];
-
-    const container = document.querySelector('.products');
-
-    /*  */
     const template = document.querySelector('#product');
     const pr = template.content.cloneNode(true);
 
@@ -29,9 +25,6 @@ async function fetchProducts(url) {
       pr.querySelector('.detail p').textContent = product.price;
 
     }
-
-    /* Add a function changeColor that makes new price Red */
-
     /* Imports images from API to the clone div*/
     pr.querySelector('#jacket-img').src = product.image;
 
@@ -40,11 +33,15 @@ async function fetchProducts(url) {
     container.appendChild(pr);
 
   }
-};
-fetchProducts('https://api.noroff.dev/api/v1/rainy-days');
 
 
+}
+async function initializeProducts() {
+  const products = await fetchProducts(PRODUCTS_URL);
+  displayProducts(products)
+}
 
+initializeProducts();
 
 
 
