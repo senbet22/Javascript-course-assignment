@@ -1,36 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jacket_list</title>
     <link rel="stylesheet" href="css/2_jacket_list.css">
-    <style>@import url('https://fonts.googleapis.com/css2?family=Gelasio&display=swap');</style>
-    <style>@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&family=Montserrat:wght@100;200;400;600;700;800;900&family=Poppins:wght@200;300;400;600;700&display=swap');</style>
-    <style>@import url('https://fonts.googleapis.com/css2?family=Esteban&display=swap');</style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gelasio&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&family=Montserrat:wght@100;200;400;600;700;800;900&family=Poppins:wght@200;300;400;600;700&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Esteban&display=swap');
+    </style>
     <script src="https://kit.fontawesome.com/3ad74a7a32.js" crossorigin="anonymous"></script>
+    <script type="module" src="settings.js"></script>
+    <script type="module" src="mensjackets.js"></script>
+
 </head>
+
 <body>
 
     <!--Blue navigationbar-->
     <nav class="navbar-one flex" id="navbar-one">
-        <div class="gradient">  
+        <div class="gradient">
         </div>
         <div class="logo flex">
-            <a href="index.html"><img src="images/RainyDays_Logo.png"></a> 
+            <a href="index.html"><img src="images/RainyDays_Logo.png"></a>
         </div>
         <div class="navbar-icons flex">
             <div class="magnifying-glass">
                 <i class="fa-solid fa-magnifying-glass"></i>
-            </div>  
+            </div>
             <div class="user">
                 <i class="fa-solid fa-user"></i>
-            </div>  
+            </div>
             <div class="cart">
                 <i class="fa-solid fa-cart-shopping"></i>
-            </div>  
+            </div>
         </div>
-    </nav> 
+    </nav>
 
     <!--Orange navigationbar-->
 
@@ -39,7 +50,7 @@
         <div class="nav-links">
 
             <input type="checkbox" id="hamburger">
-            
+
             <label for="hamburger">
                 <div class="ham-container">
                     <div class="line" id="active"></div>
@@ -76,24 +87,19 @@
             <option>Default</option>
             <option>Price Low to High</option>
             <option>Price High to Low</option>
-            <option>Hiking</option>
-            <option>Insulated Rain Jackets</option>
-            <option>Poncho's</option>
         </select>
     </div>
 
-    <section class="mens-collection"> 
-        <div class="products">
+    <section class="mens-collection">
+        <template id="product">
             <a href="3_specific_jacket.html" class="row">
-                <img src="images/model13.jpg" alt="">
+                <img id="mensImg" src="images/model13.jpg" alt="">
                 <div class="product-text">
                     <h2>Red October</h2>
                 </div>
 
                 <div class="detail">
-                    <h5><i class="fa-solid fa-check"></i> Waterproof and breathable</h5>
-                    <h5><i class="fa-solid fa-check"></i> Lightweight and packable</h5>
-                    <h5><i class="fa-solid fa-check"></i> advanced wind-resistant technology</h5>
+                    <h5></h5>
                     <div class="color color-red"></div>
                     <div class="color color-black"></div>
                     <div class="color color-darkblue"></div>
@@ -101,184 +107,17 @@
                 </div>
             </a>
 
-            <a href="3_specific_jacket.html" class="row">
-                <img src="images/model1.jpg" alt="">
-                <div class="product-text">
-                    <h2>Runners Dream</h2>
-                </div>
+        </template>
 
-                <div class="detail">
-                    <h5><i class="fa-solid fa-check"></i> Waterproof and breathable</h5>
-                    <h5><i class="fa-solid fa-check"></i> Lightweight and packable</h5>
-                    <h5><i class="fa-solid fa-check"></i> advanced wind-resistant technology</h5>
-                    <div class="color color-navy"></div>
-                    <div class="color color-brown"></div>
-                    <div class="color color-darkblue"></div>
-                    <p>$89.00</p>
-                </div>
-            </a>
+        <div class="products">
 
-            <a href="3_specific_jacket.html" class="row">
-                <img src="images/model5.jpg" alt="">
-                <div class="product-text">
-                    <h2>Midnight blue</h2>
-                </div>
-
-                <div class="detail">
-                    <h5><i class="fa-solid fa-check"></i> Waterproof and breathable</h5>
-                    <h5><i class="fa-solid fa-check"></i> Lightweight and packable</h5>
-                    <h5><i class="fa-solid fa-check"></i> advanced wind-resistant technology</h5>
-                    <div class="color color-darkblue"></div>
-                    <div class="color color-black"></div>
-                    <div class="color color-brown"></div>
-                    <p>$149.00</p>
-                </div>
-            </a>
-
-            <a href="3_specific_jacket.html" class="row">
-                <img src="images/model10.jpg" alt="">
-                <div class="product-text">
-                    <h2>Cold Rain</h2>
-                </div>
-
-                <div class="detail">
-                    <h5><i class="fa-solid fa-check"></i> Waterproof and breathable</h5>
-                    <h5><i class="fa-solid fa-check"></i> Lightweight and packable</h5>
-                    <h5><i class="fa-solid fa-check"></i> advanced wind-resistant technology</h5>
-                    <div class="color color-brown"></div>
-                    <div class="color color-green"></div>
-                    <div class="color color-darkblue"></div>
-                    <p>$119.00</p>
-                </div>
-            </a>
-
-                <a href="3_specific_jacket.html" class="row">
-                    <img src="images/model15.jpg" alt="">
-                    <div class="product-text">
-                        <h2>Morning Rain</h2>
-                    </div>
-
-                    <div class="detail">
-                        <h5><i class="fa-solid fa-check"></i> Waterproof and breathable</h5>
-                        <h5><i class="fa-solid fa-check"></i> Lightweight and packable</h5>
-                        <h5><i class="fa-solid fa-check"></i> advanced wind-resistant technology</h5>
-                        <div class="color color-blue"></div>
-                        <div class="color color-black"></div>
-                        <div class="color color-darkblue"></div>
-                        <p>$99.00</p>
-                    </div>
-                </a>
-
-                <a href="3_specific_jacket.html" class="row">
-                    <img src="images/model11.jpg" alt="">
-                    <div class="product-text">
-                        <h2>Firstclass Jacket</h2>
-                    </div>
-
-                    <div class="detail">
-                        <h5><i class="fa-solid fa-check"></i> Waterproof and breathable</h5>
-                        <h5><i class="fa-solid fa-check"></i> Lightweight and packable</h5>
-                        <h5><i class="fa-solid fa-check"></i> advanced wind-resistant technology</h5>
-                        <div class="color color-black"></div>
-                        <div class="color color-grey"></div>
-                        <div class="color color-darkblue"></div>
-                        <p>$129.00</p>
-                    </div>
-                </a>
-
-                <a href="3_specific_jacket.html" class="row">
-                    <img src="images/model2.jpg" alt="">
-                    <div class="product-text">
-                        <h2>Pacific blue</h2>
-                    </div>
-
-                    <div class="detail">
-                        <h5><i class="fa-solid fa-check"></i> Waterproof and breathable</h5>
-                        <h5><i class="fa-solid fa-check"></i> Lightweight and packable</h5>
-                        <h5><i class="fa-solid fa-check"></i> advanced wind-resistant technology</h5>
-                        <div class="color color-blue"></div>
-                        <div class="color color-grey"></div>
-                        <div class="color color-darkblue"></div>
-                        <p>$89.00</p>
-                    </div>
-                </a>
-
-                <a href="3_specific_jacket.html" class="row">
-                    <img src="images/model7.jpg" alt="">
-                    <div class="product-text">
-                        <h2>Summer Rain</h2>
-                    </div>
-
-                    <div class="detail">
-                        <h5><i class="fa-solid fa-check"></i> Waterproof and breathable</h5>
-                        <h5><i class="fa-solid fa-check"></i> Lightweight and packable</h5>
-                        <h5><i class="fa-solid fa-check"></i> advanced wind-resistant technology</h5>
-                        <div class="color color-yellow"></div>
-                        <div class="color color-grey"></div>
-                        <div class="color color-blue"></div>
-                        <p>$119.00</p>
-                    </div>
-                </a>
-
-                <a href="3_specific_jacket.html" class="row">
-                    <img src="images/model8.jpg" alt="">
-                    <div class="product-text">
-                        <h2>Covid 23</h2>
-                    </div>
-
-                    <div class="detail">
-                        <h5><i class="fa-solid fa-check"></i> Waterproof and breathable</h5>
-                        <h5><i class="fa-solid fa-check"></i> Lightweight and packable</h5>
-                        <h5><i class="fa-solid fa-check"></i> advanced wind-resistant technology</h5>
-                        <div class="color color-navy"></div>
-                        <div class="color color-black"></div>
-                        <div class="color color-darkblue"></div>
-                        <p>$89.00</p>
-                    </div>
-                </a>
-
-                <a href="3_specific_jacket.html" class="row">
-                    <img src="images/model6.jpg" alt="">
-                    <div class="product-text">
-                        <h2>Active Wear</h2>
-                    </div>
-
-                    <div class="detail">
-                        <h5><i class="fa-solid fa-check"></i> Waterproof and breathable</h5>
-                        <h5><i class="fa-solid fa-check"></i> Lightweight and packable</h5>
-                        <h5><i class="fa-solid fa-check"></i> advanced wind-resistant technology</h5>
-                        <div class="color color-grey"></div>
-                        <div class="color color-black"></div>
-                        <div class="color color-darkblue"></div>
-                        <p>$119.00</p>
-                    </div>
-                </a>
-
-                <a href="3_specific_jacket.html" class="row">
-                    <img src="images/model13.jpg" alt="">
-                    <div class="product-text">
-                        <h2>Trappers comfort</h2>
-                    </div>
-
-                    <div class="detail">
-                        <h5><i class="fa-solid fa-check"></i> Waterproof and breathable</h5>
-                        <h5><i class="fa-solid fa-check"></i> Lightweight and packable</h5>
-                        <h5><i class="fa-solid fa-check"></i> advanced wind-resistant technology</h5>
-                        <div class="color color-red"></div>
-                        <div class="color color-black"></div>
-                        <div class="color color-navy"></div>
-                        <p>$139.00</p>
-                    </div>
-                </a>
-
-
-
-            
         </div>
 
-
-        
     </section>
+
+
+
+
 
     <!--Contact section (footer)-->
     <footer class="contact">
@@ -299,8 +138,12 @@
 
             <div class="second-info">
                 <h2>Support</h2>
-                <a href="7_contact_page.html"><p>Contact Us</p></a>
-                <a href="6_about_page.html"><p>About Page</p> </a>
+                <a href="7_contact_page.html">
+                    <p>Contact Us</p>
+                </a>
+                <a href="6_about_page.html">
+                    <p>About Page</p>
+                </a>
                 <p>Size Guide</p>
                 <p>Shopping & Returns</p>
                 <p>Privacy</p>
@@ -333,10 +176,7 @@
 
     </footer>
 
-       
+
 </body>
+
 </html>
-
-
-
-
