@@ -17,9 +17,11 @@ async function fetchProducts(url) {
 
     const container = document.querySelector('.products');
 
+    /*  */
     const template = document.querySelector('#product');
     const pr = template.content.cloneNode(true);
 
+    /* Imports Price from API and checks if a product is Discounted. */
     pr.querySelector('h2').textContent = product.title;
     if (product.onSale) {
       pr.querySelector('.detail p').innerHTML = `<del>${product.price}</del> ${product.discountedPrice}`;

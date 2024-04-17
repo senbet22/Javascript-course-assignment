@@ -11,31 +11,32 @@ async function fetchProducts(url) {
     container.innerHTML = '';
 
     for (let i = 0; i < products.length; i++) {
-        console.log(products[i]);
 
         const product = products[i];
 
-        const container = document.querySelector('.products');
+        if (products[i].gender === 'Male') {
+            const container = document.querySelector('.products');
 
-        const template = document.querySelector('#product');
-        const pr = template.content.cloneNode(true);
+            const template = document.querySelector('#product');
+            const pr = template.content.cloneNode(true);
 
-        pr.querySelector('h2').textContent = product.title;
-        if (product.onSale) {
-            pr.querySelector('.detail p').innerHTML = `<del>${product.price}</del> ${product.discountedPrice}`;
-        } else {
-            pr.querySelector('.detail p').textContent = product.price;
+            pr.querySelector('h2').textContent = product.title;
+            if (product.onSale) {
+                pr.querySelector('.detail p').innerHTML = `<del>${product.price}</del> ${product.discountedPrice}`;
+            } else {
+                pr.querySelector('.detail p').textContent = product.price;
 
+            }
+
+            /* Add a function changeColor that makes new price Red */
+
+            /* Imports images from API to the clone div*/
+            pr.querySelector('#mensImg').src = product.image;
+
+            pr.querySelector('h5').textContent = product.description;
+            /*   Appends alle the code above to HTML. */
+            container.appendChild(pr);
         }
-
-        /* Add a function changeColor that makes new price Red */
-
-        /* Imports images from API to the clone div*/
-        pr.querySelector('#mensImg').src = product.image;
-
-        pr.querySelector('h5').textContent = product.description;
-        /* Appends alle the code above to HTML. */
-        container.appendChild(pr);
 
     }
 };
