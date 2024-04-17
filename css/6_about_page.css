@@ -1,0 +1,79 @@
+/* Navigation bar */
+@import url(styles.css);
+
+
+
+/* Body About-Page */
+.about-page{
+    margin: 8%;
+}
+.about-page h1{
+    padding: 30px;
+    color: #ffff;
+    background-color: #007997;
+}
+.boxes{
+    display: flex;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+.box-1{
+    width: 100%;
+    height: auto;
+    margin-right: 10px;
+
+}
+.box-2{
+    width: 100%;
+    height: 360px;
+    
+}
+.box-2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0px 0px 1px #922d2d;
+}
+
+.boxes h2{
+    font-weight: 600;
+    padding: 20px 60px;
+    text-align: center;
+}
+.boxes p{
+    font-weight: 500;
+    font-size: 18px;
+    color: #000000;
+    margin: 20px 10px;
+    line-height: 1.5;
+    padding: 20px 20px;
+
+}
+.devider{
+    width: 100%;
+    height: 35px;
+    background-color: #FECFB2;
+    text-decoration: none;
+}
+.devider-2{
+    width: 100%;
+    height: 35px;
+    background-color: #4E9FB3;
+    text-decoration: none;
+}
+
+
+/* ----- Media querry body ------ */
+
+@media (max-width:899px) {
+    /* Body */
+    .boxes{
+        flex-direction: column;
+    }
+    .box-1{
+        order: -1;
+    }
+
+}

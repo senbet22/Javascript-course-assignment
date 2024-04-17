@@ -1,0 +1,174 @@
+/* Navigation bar */
+@import url(styles.css);
+
+
+
+/* Body checkout_page */
+
+.checkout-page{
+    font-family: 'Montserrat', sans-serif;
+    margin: 8%;
+}
+.checkout-page h1{
+    padding: 30px 0px;
+    font-size: 30px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cart-info img{
+    width: 90px;
+}
+.cart-info a{
+    color: #4E9FB3;
+}
+th{
+    text-align: left;
+    padding: 10px;
+    color: #000000;
+    background: #4E9FB3;
+    font-weight: 600;
+    border-bottom: 2px solid;
+}
+td{
+    padding: 20px 5px;
+    border-bottom: 1px solid;
+    background-color: #FBF2E8;
+    font-weight: 600;
+}
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+td img{
+   width: 80px; 
+   height: 80px;
+   margin-right: 10px;
+}
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+}
+.total-price table{
+    border-top: 3px solid;
+    width: 100%;
+    max-width: 400px;
+}
+td:last-child{
+    text-align: right;
+}
+
+/* shipping details and Payment method */
+
+.shipping-choice{
+    display: flex;
+    text-align: center;
+    column-gap: 30px;
+    margin-left: 50%;
+    margin-bottom: 20px;
+    line-height: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    
+}
+.box-1{
+    height: 35px;
+    width: 100px;
+    background-color: #4E9FB3;
+    border: 2px solid #000000;
+    
+}
+.box-2{
+    height: 35px;
+    width: 100px;
+    background-color: #F1D7B9;
+    border: 2px solid #000000;
+}
+.shipping-details h2{
+    padding-top: 80px;
+}
+.under-line{
+    border: 1px solid #000000;
+    margin: 20px 0;
+    margin-bottom: 20px;
+}
+.payment-options{
+    margin: 20px 0px;
+    padding-bottom: 30px;
+    font-size: 30px;
+}
+
+.input-field{
+    width: calc(100% / 2 - 20px);
+    padding: 10px 0;
+    margin: 5px 5px;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #000000;
+    outline: none;
+    background: #FBF2E8; 
+}
+.btn{
+    display: inline-block;
+    background-color: #4E9FB3;
+    color: white;
+    padding: 15px 45px;
+    margin: 30px 0;
+    border-radius: 10px;
+    font-weight: 700;
+    box-shadow: 5px 5px 10px #999896;
+    text-decoration: none;
+}
+.btn:hover{
+    background-color: #FF9252;
+    color: #000000;
+    transition: all 0.4s;
+}
+.shipping-details .btn{
+    margin-left: 50%;
+}
+.small-field{
+    width: calc(40% / 2 - 20px);
+    padding: 10px 0;
+    margin: 5px 5px;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #000000;
+    outline: none;
+    background: #FBF2E8;
+}
+.payment-method h2{
+    padding-bottom: 20px;
+}
+.payment-method p{
+    padding: 40px 0px;
+}
+
+
+/* ----- Media querry body ------ */
+
+@media (max-width:799px) {
+    .btn{
+        padding: 10px 20px;
+        margin: 30px 0;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+
+}
+
+@media (max-width:550px){
+    .shipping-choice{
+        font-size: 10px;
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact_page</title>
+    <link rel="stylesheet" href="css/7_contact_page.css">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Gelasio&display=swap');</style>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&family=Montserrat:ital,wght@100;200;400;600;700;800;900&family=Poppins:wght@200;300;400;600;700&display=swap');</style>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Esteban&display=swap');</style>
+    <script src="https://kit.fontawesome.com/3ad74a7a32.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!--Blue navigationbar-->
+    <nav class="navbar-one flex" id="navbar-one">
+        <div class="gradient">  
+        </div>
+        <div class="logo flex">
+            <a href="index.html"><img src="images/RainyDays_Logo.png" alt=""></a> 
+        </div>
+        <div class="navbar-icons flex">
+            <div class="magnifying-glass">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>  
+            <div class="user">
+                <i class="fa-solid fa-user"></i>
+            </div>  
+            <div class="cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>  
+        </div>
+    </nav> 
+
+<!--Orange navigationbar-->
+
+    <nav class="navbar-second flex" id="navbar-second">
+        <div class="nav-links">
+            <input type="checkbox" id="hamburger">
+            <label for="hamburger">
+                <div class="ham-container">
+                    <div class="line" id="active"></div>
+                </div>
+            </label>
+
+            <ul class="flex">
+                <li><a href="index.html">New Arrivals</a></li>
+                <li><a href="2_jacket_list.html">Men</a></li>
+                <li><a href="2_jacket_list.html">Women</a></li>
+                <li><a href="8_under_construction.html">Ski</a></li>
+                <li><a href="8_under_construction.html">Camping</a></li>
+                <li><a href="7_contact_page.html">Join our community</a></li>
+            </ul>
+        </div>
+
+        <div id="mobile">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+    </nav>
+
+
+
+
+
+
+<!--contact_page-->
+
+
+
+<section class="contact-body">
+    <div class="contact-us">
+        <h1>Contact Us</h1>
+        <div class="overlay"></div>
+        <img src="images/contact-us.jpg" alt="">
+    </div>
+
+    <div class="opening-hours">
+        <h2>Opening hours:</h2>
+        <p>Monday-Thursday: 08:00 AM - 20:00 PM <br>
+            Friday-Saturday: 08:00 AM - 16:00 PM <br>
+            Sunday: closed <br>
+            Telephone: +47 93056667 <br>
+            Email: rainy@days.com <br>
+            On weekdays, we aim to respond to your emails within 24 hours. <br></p>
+    </div>
+
+    <div class="visit-location">
+        <h2>Visit closest store to you!</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.9100553802425!2d10.77188099196786!3d59.91704007500873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416e5bed844b27%3A0x653ef5922c5d121b!2sMunch!5e0!3m2!1sen!2sno!4v1703077730014!5m2!1sen!2sno"
+         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="send-mail">
+        <form>
+            <div class="input-group">
+                <input type="text" class="con-input" id="name" required>
+                <label for="name" class="con-label"><i class="fa-solid fa-person"></i> Your Name</label>
+            </div>
+    
+            <div class="input-group">
+                <input type="text" class="con-input" id="number" required>
+                <label for="number" class="con-label"><i class="fa-solid fa-phone"></i> Phone #</label>
+            </div>
+    
+            <div class="input-group">
+                <input type="email" class="con-input" id="email" required>
+                <label for="email" class="con-label"><i class="fa-solid fa-envelope"></i> Email</label>
+            </div>
+    
+            <div class="input-group">
+                <textarea id="message" rows="10" required></textarea>
+                <label for="message" class="con-label"><i class="fa-solid fa-comments"></i> What is the fuss?</label>
+            </div>
+            <button type="submit"><i class="fa-solid fa-paper-plane"></i> SUBMIT</button>
+        </form>
+
+    </div>
+
+
+</section>
+     
+
+
+
+
+
+
+    <!--Contact section (bottom)-->
+
+    <footer class="contact">
+        <div class="contact-info">
+            <div class="first-info">
+                <img src="images/RainyDays_Logo.png" alt="">
+
+                <p>Fjelltoppen 13 <br> N-1283 Oslo</p>
+                <p>+47 930 56 667</p>
+                <p>rainy@days.com</p>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="second-info">
+                <h3>Support</h3>
+                <a href="7_contact_page.html"><p>Contact Us</p></a>
+                <a href="6_about_page.html"><p>About Page</p> </a>
+                <p>Size Guide</p>
+                <p>Shopping & Returns</p>
+                <p>Privacy</p>
+            </div>
+
+            <div class="third-info">
+                <h3>Shop</h3>
+                <p>Men's Shopping</p>
+                <p>Womens's Shopping</p>
+                <p>Camping</p>
+                <p>Ski</p>
+            </div>
+
+            <div class="fourth-info">
+                <h3>Company</h3>
+                <p>About</p>
+                <p>Blog</p>
+                <p>Make It Rain Fund</p>
+            </div>
+
+            <div class="fifth-info">
+                <h3>Join Our Community</h3>
+                <p>Get exclusive offers, Inspiration.</p>
+                <p>view your orders and receipts online</p>
+                <p>be eligible to win prizes every month</p>
+                <p>Sign up for hikes with fellow enthusiasts</p>
+                <img src="images/paymentmethod1.png" alt="">
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+</html>
+
+
+
+

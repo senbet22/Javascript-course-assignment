@@ -1,0 +1,155 @@
+/* Navigation bar */
+@import url(styles.css);
+
+
+
+
+/* Body checkout_success */
+
+section{
+    margin: 8%;
+}
+
+.checkout-success{
+    font-family: 'Montserrat', sans-serif;
+    margin: 8%;
+    
+}
+.under-line{
+    border: 1px solid #6F6E6E;
+    margin: 20px 0;
+    margin-bottom: 20px;
+}
+.thank-you{
+    display: flex;
+    margin: 20px 0px;
+
+}
+.thank-you .icon{
+    font-size: 60px;
+    margin-left: 20%;
+    color: rgb(3, 90, 3);
+}
+.text h1{
+    font-weight: 600;
+    font-size: 24px;
+}
+.text p{
+    margin: 10px 0px;
+    font-size: 16px;
+    color: #6F6E6E;
+}
+.big-box{
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    color: #6F6E6E;
+    border: 2px solid #6F6E6E;
+}
+.big-box h1{
+    padding: 20px 40px;
+    font-weight: 600;
+    color: #000000;
+}
+.product-details{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+    gap: 3rem;
+    text-align: left;
+}
+.product-details p{
+    margin: 40px;
+    font-size: 16px;
+    font-weight: 600;
+
+}
+.product-details .color{
+    color: #4E9FB3;
+}
+
+/* Small-boxes */
+
+.small-boxes{
+    display: flex;
+    text-align: left;
+}
+.box-1{
+    width: 100%;
+    height: 260px;
+    margin-top: 40px;
+    color: #6F6E6E;
+    border: 2px solid #6F6E6E;
+    margin-right: 40px;
+}
+.box-2{
+    width: 100%;
+    height: 260px;
+    margin-top: 40px;
+    color: #6F6E6E;
+    border: 2px solid #6F6E6E;
+    margin-left: 40px;
+
+}
+.small-boxes h2{
+    font-weight: 600;
+    margin: 40px 60px;
+    text-align: center;
+}
+.small-boxes p{
+    font-weight: 600;
+    color: #4E9FB3;
+    margin: 40px 60px;
+    text-align: center;
+
+}
+.btn{
+    display: inline-block;
+    background-color: #4E9FB3;
+    color: white;
+    padding: 10px 35px;
+    margin-top: 60px;
+    border-radius: 10px;
+    font-weight: 700;
+    box-shadow: 5px 5px 10px #999896;
+    text-decoration: none;
+}
+.btn:hover{
+    background-color: #FF9252;
+    color: #000000;
+    transition: all 0.4s;
+}
+ .button{
+    text-align: right;
+}
+
+
+/* ----- Media querry body------ */
+
+@media (max-width:799px) {
+    .big-box{
+        width: auto;
+        height: auto;
+    }
+    .product-details p{
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+    .small-boxes{
+        flex-direction: column;
+    }
+    .box-2{
+        margin-right: 0px;
+    }
+    .box-2{
+        margin-left: 0px;
+    }
+    .btn{
+        padding: 8px 15px;
+        margin-top: 40px;
+    }
+
+
+
+
+}
+
