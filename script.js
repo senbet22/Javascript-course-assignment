@@ -2,10 +2,15 @@ import { PRODUCTS_URL } from './settings.js';
 
 async function fetchProducts(url) {
 
-  let data = await fetch(url);
-  let products = await data.json();
-  console.log(products);
-  return products;
+  try {
+    let response = await fetch(url);
+    if (!response.ok) throw new Error("Failed to fetch data from the API");
+    let products = await response.json();
+    console.log(products);
+    return products;
+  } catch (err) {
+    console.warn(err.message);
+  }
 }
 
 export function displayProducts(products) {

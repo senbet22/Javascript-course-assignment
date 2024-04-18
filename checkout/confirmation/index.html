@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="css/1_homepage.css">
+    <title>specific_jacket</title>
+    <link rel="stylesheet" href="../../css/5_checkout_success.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Gelasio&display=swap');
     </style>
@@ -16,11 +16,6 @@
         @import url('https://fonts.googleapis.com/css2?family=Esteban&display=swap');
     </style>
     <script src="https://kit.fontawesome.com/3ad74a7a32.js" crossorigin="anonymous"></script>
-    <script type="module" src="script.js"></script>
-    <script type="module" src="settings.js"></script>
-
-    <!-- <script defer src="settings.js"></script> -->
-
 </head>
 
 <body>
@@ -30,7 +25,7 @@
         <div class="gradient">
         </div>
         <div class="logo flex">
-            <a href="index.html"><img src="images/RainyDays_Logo.png"></a>
+            <a href="index.html"><img src="../images/RainyDays_Logo.png"></a>
         </div>
         <div class="navbar-icons flex">
             <div class="magnifying-glass">
@@ -58,12 +53,12 @@
                 </div>
             </label>
             <ul class="flex">
-                <li><a href="index.html">New Arrivals</a></li>
-                <li><a href="mens-jacket.html">Men</a></li>
-                <li><a href="womens-jacket.html">Women</a></li>
-                <li><a href="under-construction.html">Ski</a></li>
-                <li><a href="under-construction.html">Camping</a></li>
-                <li><a href="contact-us.html">Join our community</a></li>
+                <li><a href="../index.html">New Arrivals</a></li>
+                <li><a href="../mens-jacket.html">Men</a></li>
+                <li><a href="../womens-jacket.html">Women</a></li>
+                <li><a href="../under-construction.html">Ski</a></li>
+                <li><a href="../under-construction.html">Camping</a></li>
+                <li><a href="../contact-us.html">Join our community</a></li>
             </ul>
         </div>
 
@@ -76,35 +71,64 @@
     </nav>
 
 
-    <!--Bestseller section-->
-    <div class="top-info">
-        <h1>Best sellers</h1>
-    </div>
 
-    <section class="home">
 
-        <template id="product">
-            <a href="../Javascript-course-assignment/product/index.html" class="row">
-                <img id="jacket-img" src="images/model9.jpg" alt="">
-                <div class="product-text">
-                    <h2>Light Feather</h2>
-                </div>
 
-                <div class="detail">
-                    <h3></h3>
-                    <div class="color color-white"></div>
-                    <div class="color color-grey"></div>
-                    <div class="color color-darkblue"></div>
-                    <p>$169.00</p>
-                </div>
-            </a>
 
-        </template>
+    <!--Checkout_success-->
 
-        <div class="products">
+    <section class="checkout-success">
+        <hr class="under-line">
+        <div class="thank-you">
+            <div class="text">
+                <h1>Thank you for your purchase!</h1>
+                <p>Your order number is: #0004465</p>
+            </div>
 
+            <div class="icon"><i class="fa-solid fa-circle-check"></i></div>
         </div>
+
+        <div class="big-box">
+            <h1>Product</h1>
+            <div class="product-details">
+                <div class="row-1">
+                    <p>Runner's Dream: Large</p>
+                    <p>Quantity: 1</p>
+                </div>
+
+                <div class="row-2">
+                    <p>Shipping</p>
+                    <p class="color">Free</p>
+                </div>
+
+                <div class="row-3">
+                    <p>Total:</p>
+                    <p class="color">$89.00</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- small boxes -->
+
+        <div class="small-boxes">
+            <div class="box-1">
+                <h2>Shipping to:</h2>
+                <p>Lundliveien 5B,<br>0566 <br>Oslo, Norway</p>
+            </div>
+
+            <div class="box-2">
+                <h2>Expected delivery:</h2>
+                <p>7th june 2024</p>
+            </div>
+        </div>
+        <div class="button">
+            <a href="../../index.html" class="btn">Continue Shopping</a>
+        </div>
+        <hr class="under-line">
+
     </section>
+
 
 
 
@@ -114,7 +138,7 @@
     <footer class="contact">
         <div class="contact-info">
             <div class="first-info">
-                <img src="images/RainyDays_Logo.png" alt="">
+                <img src="../images/RainyDays_Logo.png" alt="">
 
                 <p>Fjelltoppen 13 <br> N-1283 Oslo</p>
                 <p>+47 930 56 667</p>
@@ -129,10 +153,10 @@
 
             <div class="second-info">
                 <h2>Support</h2>
-                <a href="contact-us.html">
+                <a href="../contact-us.html">
                     <p>Contact Us</p>
                 </a>
-                <a href="about.html">
+                <a href="../about.html">
                     <p>About Page</p>
                 </a>
                 <p>Size Guide</p>
@@ -161,11 +185,13 @@
                 <p>view your orders and receipts online</p>
                 <p>be eligible to win prizes every month</p>
                 <p>Sign up for hikes with fellow enthusiasts</p>
-                <img src="images/paymentmethod1.png" alt="">
+                <img src="../images/paymentmethod1.png" alt="">
             </div>
         </div>
 
     </footer>
+
+
 </body>
 
 </html>
