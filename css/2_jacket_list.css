@@ -3,7 +3,7 @@
 
 
 /* Hero (body) */
-.top-info h1{
+.top-info h1 {
     font-family: 'Esteban', serif;
     color: #4E9FB3;
     font-size: 28px;
@@ -13,7 +13,8 @@
     margin-bottom: 30px;
     background-color: #e0000034;
 }
-.filter select{
+
+.filter select {
     display: flex;
     font-family: 'Esteban', serif;
     color: #000;
@@ -22,7 +23,8 @@
     margin-right: 5%;
     background-color: #e0000034;
 }
-.mens-collection{
+
+.mens-collection {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -31,10 +33,12 @@
     padding-right: 8%;
     width: 95%;
 }
-.products{
-    flex-basis: 40%; 
+
+.products {
+    flex-basis: 40%;
 }
-.row{
+
+.row {
     width: 220px;
     height: 500px;
     display: inline-flex;
@@ -45,19 +49,22 @@
     box-sizing: border-box;
     cursor: pointer;
     margin: 10px 15px;
-    padding-bottom: 200px;
+    padding-bottom: 10px;
 }
-.row img{
+
+.row img {
     width: 220px;
     height: 100%;
     transition: all .40s;
     padding-top: 0px;
     border: 2px solid #999896;
 }
-.row img:hover{
+
+.row img:hover {
     transform: scale(0.95);
 }
-.product-text h2{
+
+.product-text h2 {
     font-family: 'Esteban', serif;
     position: relative;
     left: 0;
@@ -65,69 +72,43 @@
     font-size: 16px;
     font-weight: 700;
 }
-.detail h5{
+
+.detail h5 {
     margin-top: 10px;
     font-size: 14px;
     font-weight: 400;
 }
-.detail p{
+
+.detail p {
     margin-top: 5px;
     color: #4E9FB3;
     font-size: 18px;
     font-weight: 600;
 }
-.color{
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    background: none;
-    border-radius: 50%;
-    margin-right: 3px;
-    cursor: pointer;
-    margin-top: 5px;
-    border: solid #000 1px;
-    box-shadow: 5px 5px 6px #00000034;
 
+.btn-add-to-cart {
+    display: block;
+    margin-top: 10px;
+    background-color: #4E9FB3;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
 }
-.color-red{
-    background-color: #D8152B;
-}
-.color-white{
-    background-color: #f6f6f6;
-}
-.color-black{
-    background-color: #1A1A1A;
-}
-.color-darkblue{
-    background-color: #081B4B;
-}
-.color-black{
-    background-color: #000000;
-}
-.color-yellow{
-    background-color: #F9D059;
-}
-.color-grey{
-    background-color: #9498BD;
-}
-.color-brown{
-    background-color: #4F463C;
-}
-.color-green{
-    background-color: #117221;
-}
-.color-navy{
-    background-color: #434A3A;
-}
-.color-blue{
-    background-color: #0c4d96;
+
+.btn-add-to-cart:hover {
+    background-color: #FF9252;
+    color: black;
 }
 
 
 /* ----- Media querry (removes img hover effect on mobile devices ------ */
 
 @media (max-width:799px) {
-    .row img:hover{
+    .row img:hover {
         transform: scale(1);
-    } 
+    }
 }

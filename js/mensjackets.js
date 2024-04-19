@@ -35,7 +35,7 @@ function displayProducts(products) {
             /* Imports images from API to the clone div*/
             pr.querySelector('#jacket-img').src = product.image;
 
-            pr.querySelector('h5').textContent = product.description;
+            // pr.querySelector('h5').textContent = product.description;
             /* Appends alle the code above to HTML. */
             container.appendChild(pr);
 
