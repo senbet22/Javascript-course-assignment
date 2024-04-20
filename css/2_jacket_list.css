@@ -96,6 +96,7 @@
     border-radius: 5px;
     font-weight: 700;
     cursor: pointer;
+    box-shadow: 2px 2px 5px #999896;
     transition: 0.3s;
 }
 
@@ -103,6 +104,12 @@
     background-color: #FF9252;
     color: black;
 }
+
+/* Discount price on jackets */
+.discounted-price {
+    color: red;
+}
+
 
 
 /* ----- Media querry (removes img hover effect on mobile devices ------ */

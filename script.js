@@ -13,7 +13,7 @@ async function fetchProducts(url) {
   }
 }
 
-export function displayProducts(products) {
+function displayProducts(products) {
   const container = document.querySelector('.products');
   container.innerHTML = '';
 
@@ -25,7 +25,7 @@ export function displayProducts(products) {
     /* Imports Price from API and checks if a product is Discounted. */
     pr.querySelector('h2').textContent = product.title;
     if (product.onSale) {
-      pr.querySelector('.detail p').innerHTML = `<del>${product.price}</del> ${product.discountedPrice}`;
+      pr.querySelector('.detail p').innerHTML = `<del>${product.price}</del> <span class="discounted-price">${product.discountedPrice}</span>`;
     } else {
       pr.querySelector('.detail p').textContent = product.price;
 
@@ -35,10 +35,18 @@ export function displayProducts(products) {
     pr.querySelector('#jacket-img').src = product.image;
 
     // pr.querySelector('h3').textContent = product.description;
+
     /* Appends alle the code above to HTML. */
     container.appendChild(pr);
 
   }
+
+
+
+
+
+
+
 
   // // Create product links
   // for (let i = 0; i < products.length; i++) {

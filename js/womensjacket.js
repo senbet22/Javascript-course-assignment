@@ -28,7 +28,7 @@ function displayProducts(products) {
             /* Imports Price from API and checks if a product is Discounted. */
             pr.querySelector('h2').textContent = product.title;
             if (product.onSale) {
-                pr.querySelector('.detail p').innerHTML = `<del>${product.price}</del> ${product.discountedPrice}`;
+                pr.querySelector('.detail p').innerHTML = `<del>${product.price}</del> <span class="discounted-price">${product.discountedPrice}</span>`;
             } else {
                 pr.querySelector('.detail p').textContent = product.price;
 
