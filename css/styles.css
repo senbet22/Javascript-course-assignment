@@ -1,9 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     min-height: 100vh;
     width: 100%;
     background-color: #FDF8F2;
@@ -11,71 +12,83 @@ body{
     background-size: cover;
     position: relative;
 }
-nav{
+
+nav {
     padding: 0 50px;
     width: 100%;
 }
-.flex{
+
+.flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.navbar-one{
+
+.navbar-one {
     background-color: #4E9FB3;
     color: #000000;
     height: 100px;
 }
-.gradient{
+
+.gradient {
     width: 500px;
     height: 500px;
-    border: 1px ;
+    border: 1px;
     border-radius: 50%;
     position: absolute;
     left: 50%;
-    transform: translate(-50%, -51.5%);  
+    transform: translate(-50%, -51.5%);
     background-image: radial-gradient(#FF9252, #ff925263);
 }
-.navbar-icons > div + div{
+
+.navbar-icons>div+div {
     margin-left: 20px;
     font-size: 20px;
+}
+
+.cart-icon {
     cursor: pointer;
 }
-.magnifying-glass{
+
+.magnifying-glass {
     font-size: 20px;
-    cursor: pointer;
 }
-nav img{
+
+nav img {
     width: 150px;
     position: absolute;
     left: 50%;
-    transform: translate(-50%, -50%);   
+    transform: translate(-50%, -50%);
 }
 
 
 /* ---second Nav-bar (orange)--- */
 
-.navbar-second{
+.navbar-second {
     background-color: #FF9252;
     height: 60px;
     position: sticky;
     top: 0;
     z-index: 3;
 }
-.nav-links ul li{
+
+.nav-links ul li {
     font-family: 'Gelasio', serif;
     list-style: none;
     display: inline-block;
     padding: 8px 28px;
     position: relative;
-    
+
 }
-.nav-links ul li a{
+
+.nav-links ul li a {
     color: #000000d1;
     text-decoration: none;
     font-size: 18px;
     font-weight: 600;
 }
-.nav-links ul li a:hover{
+
+.nav-links ul li a:hover {
     color: #000000;
 }
 
@@ -92,72 +105,75 @@ nav img{
     transform: translateX(-50%);
     transition: width 0.3s ease;
 }
+
 .nav-links .flex li:hover::after {
     width: 100%;
 }
 
 /* Hides mobile icons in desktop version  */
-#mobile{
+#mobile {
     display: none;
     align-items: center;
 }
 
 /* Hides checkbox on desktop version */
-#hamburger{
-    display:none;
-  }
+#hamburger {
+    display: none;
+}
 
 /* Hamburger menu */
-.ham-container{
-height:30px;
-width:40px;
-display:flex;
-margin:10% auto;
-display:none;
-justify-content:center;
-align-items:center;
-cursor:pointer;
+.ham-container {
+    height: 30px;
+    width: 40px;
+    display: flex;
+    margin: 10% auto;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
-.line{
-position:absolute;
-height:5px;
-width:30px;
-background-color:black;
-transition: .4s ease;
+.line {
+    position: absolute;
+    height: 5px;
+    width: 30px;
+    background-color: black;
+    transition: .4s ease;
 }
 
-.line::before{
-content:'';
-position:absolute;
-height:5px;
-width:30px;
-background-color:black;
-top:-8px;
-transition: .4s ease;
-}
-.line::after{
-content:'';
-position:absolute;
-height:5px;
-width:30px;
-background-color:black;
-top:8px;
+.line::before {
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 30px;
+    background-color: black;
+    top: -8px;
+    transition: .4s ease;
 }
 
-#hamburger:checked + label #active{
-transform:rotate(45deg);
+.line::after {
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 30px;
+    background-color: black;
+    top: 8px;
 }
 
-#hamburger:checked + label #active::before{
-transform:rotate(-90deg) translateX(-8px);
+#hamburger:checked+label #active {
+    transform: rotate(45deg);
 }
 
-#hamburger:checked + label #active::after{
-display:none; 
+#hamburger:checked+label #active::before {
+    transform: rotate(-90deg) translateX(-8px);
 }
-.nav-links input:checked ~ .flex {
-left: 0;
+
+#hamburger:checked+label #active::after {
+    display: none;
+}
+
+.nav-links input:checked~.flex {
+    left: 0;
 }
 
 
@@ -165,15 +181,18 @@ left: 0;
 
 @media (max-width:899px) {
 
-    .gradient{
+    .gradient {
         width: 350px;
     }
-    nav img{
+
+    nav img {
         width: 100px;
     }
-    #navbar-one .navbar-icons{
+
+    #navbar-one .navbar-icons {
         display: none;
     }
+
     .nav-links .flex {
         display: flex;
         flex-direction: column;
@@ -188,49 +207,56 @@ left: 0;
         box-shadow: 0 40px 60px #0000001a;
         padding: 80px 0 0 10px;
     }
-    #navbar li{
+
+    #navbar li {
         margin-bottom: 20px;
     }
-    #mobile{
+
+    #mobile {
         display: flex;
         align-items: center;
     }
-    #mobile i{
+
+    #mobile i {
         color: #000000;
         font-size: 24px;
         padding-left: 20px;
     }
-    .ham-container{
+
+    .ham-container {
         display: flex;
     }
 
     /* removes img hover effect */
-    .row img:hover{
+    .row img:hover {
         transform: scale(1);
-    }     
+    }
 }
 
 
 
 
 /* Contact section (footer) */
-.contact{
+.contact {
     margin-top: 120px;
     background-color: #999896;
 }
-.contact-info{
+
+.contact-info {
     font-family: 'Montserrat', sans-serif;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, auto));
     gap: 3rem;
-    padding: 40px;  
+    padding: 40px;
 }
+
 .contact-info h2 {
     font-weight: 800;
     font-size: 14px;
     text-transform: uppercase;
     margin-bottom: 10px;
 }
+
 .contact-info p {
     font-weight: 500;
     font-size: 14px;
@@ -240,27 +266,32 @@ left: 0;
     cursor: pointer;
     transition: all .42s;
 }
-.contact-info p:hover{
+
+.contact-info p:hover {
     color: #4E9FB3;
 }
-.social-icons i{
+
+.social-icons i {
     color: #000000;
     margin-left: 5px;
     font-size: 28px;
     transition: all .42s;
 }
-.social-icons i:hover{
+
+.social-icons i:hover {
     transform: scale(1.3);
 }
-.first-info img{
+
+.first-info img {
     width: 140px;
     height: auto;
 }
-.fifth-info img{
+
+.fifth-info img {
     width: 200px;
 }
 
-a{
+a {
     text-decoration: none;
     color: #000000;
 }

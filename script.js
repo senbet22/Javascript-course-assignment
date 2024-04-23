@@ -13,6 +13,9 @@ async function fetchProducts(url) {
   }
 }
 
+
+
+// Product display from API
 function displayProducts(products) {
   const container = document.querySelector('.products');
   container.innerHTML = '';
@@ -34,6 +37,7 @@ function displayProducts(products) {
     /* Imports images from API to the clone div*/
     pr.querySelector('#jacket-img').src = product.image;
 
+
     // pr.querySelector('h3').textContent = product.description;
 
     /* Appends alle the code above to HTML. */
@@ -43,20 +47,8 @@ function displayProducts(products) {
 
 
 
-
-
-
-
-
-  // // Create product links
-  // for (let i = 0; i < products.length; i++) {
-  //   const product = products[i];
-  //   const productLink = document.createElement('a');
-  //   productLink.href = `../Javascript-course-assignment/product/index.html?id=${product.id}`;
-  //   productLink.textContent = product.title; // Assuming 'title' is the correct property
-  //   container.appendChild(productLink);
-  // }
 }
+
 async function initializeProducts() {
   const products = await fetchProducts(PRODUCTS_URL);
   displayProducts(products)
@@ -66,16 +58,32 @@ initializeProducts();
 
 
 
+// Shopping cart section  - Open and close cart.
+let cartIcon = document.querySelector('.cart-icon');
+let closeCart = document.querySelector('.close');
+let body = document.querySelector('body');
+
+cartIcon.addEventListener('click', () => {
+  body.classList.toggle('showCart')
+});
+closeCart.addEventListener('click', () => {
+  body.classList.toggle('showCart')
+})
 
 
 
 
 
-
-
-
-
-
+// Removes item from cart
+const removeCartItemButton = document.getElementsByClassName('remove-btn');
+for (let i = 0; i < removeCartItemButton.length; i++) {
+  const button = removeCartItemButton[i];
+  button.addEventListener('click', function (event) {
+    const buttonClicked = event.target
+    buttonClicked.parentElement.parentElement.parentElement.parentElement.remove();
+    updateCartTotal();
+  });
+}
 
 
 
