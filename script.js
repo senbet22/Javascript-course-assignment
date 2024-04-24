@@ -26,7 +26,7 @@ function displayProducts(products) {
     const template = document.querySelector('#product');
     const pr = template.content.cloneNode(true);
 
-    /* Imports Price from API and checks if a product is Discounted. */
+    /* Imports Price from API and checks if a product is Discounted - Imports images from API to the clone div */
     pr.querySelector('h2').textContent = product.title;
     if (product.onSale) {
       pr.querySelector('.detail p').innerHTML = `<del>${product.price}</del> <span class="discounted-price">${product.discountedPrice}</span>`;
@@ -34,26 +34,13 @@ function displayProducts(products) {
       pr.querySelector('.detail p').textContent = product.price;
 
     }
-
-    /* Imports images from API to the clone div*/
     pr.querySelector('#jacket-img').src = product.image;
 
-
-    // pr.querySelector('h3').textContent = product.description;
 
     /* Appends alle the code above to HTML. */
     container.appendChild(pr);
 
   }
-}
-
-
-
-const addToCartButtons = document.getElementsByClassName('btn-add-to-cart')
-for (var i = 0; i < addToCartButtons.length; i++) {
-  let button = addToCartButtons[i]
-  button.addEventListener('click', addToCartClicked)
-  console.log('click')
 }
 
 async function initializeProducts() {
@@ -74,7 +61,7 @@ initializeProducts();
 
 
 
-// Shopping cart section  - Open and close cart.
+// Shopping cart- Open and close cart.
 let cartIcon = document.querySelector('.cart-icon');
 let closeCart = document.querySelector('.close');
 let body = document.querySelector('body');
@@ -101,6 +88,9 @@ for (let i = 0; i < removeCartItemButton.length; i++) {
     updateCartTotal();
   })
 }
+// //////////////////////////////////////////////////////////////////////
+
+
 
 function updateCartTotal() {
   const cartItemContainer = document.querySelector('.list-cart');
