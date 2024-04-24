@@ -190,7 +190,9 @@ nav img {
     }
 
     #navbar-one .navbar-icons {
-        display: none;
+        margin-top: 160px;
+        font-size: 35px;
+        z-index: 999;
     }
 
     .nav-links .flex {
@@ -210,17 +212,6 @@ nav img {
 
     #navbar li {
         margin-bottom: 20px;
-    }
-
-    #mobile {
-        display: flex;
-        align-items: center;
-    }
-
-    #mobile i {
-        color: #000000;
-        font-size: 24px;
-        padding-left: 20px;
     }
 
     .ham-container {

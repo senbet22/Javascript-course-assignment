@@ -15,6 +15,7 @@ async function fetchProducts(url) {
 
 
 
+
 // Product display from API
 function displayProducts(products) {
   const container = document.querySelector('.products');
@@ -44,15 +45,30 @@ function displayProducts(products) {
     container.appendChild(pr);
 
   }
+}
 
 
 
+const addToCartButtons = document.getElementsByClassName('btn-add-to-cart')
+for (var i = 0; i < addToCartButtons.length; i++) {
+  let button = addToCartButtons[i]
+  button.addEventListener('click', addToCartClicked)
+  console.log('click')
 }
 
 async function initializeProducts() {
   const products = await fetchProducts(PRODUCTS_URL);
   displayProducts(products)
 }
+
+
+
+
+
+
+
+
+
 
 initializeProducts();
 
@@ -76,16 +92,33 @@ closeCart.addEventListener('click', () => {
 
 // Removes item from cart
 const removeCartItemButton = document.getElementsByClassName('remove-btn');
+console.log(removeCartItemButton)
 for (let i = 0; i < removeCartItemButton.length; i++) {
   const button = removeCartItemButton[i];
   button.addEventListener('click', function (event) {
     const buttonClicked = event.target
     buttonClicked.parentElement.parentElement.parentElement.parentElement.remove();
     updateCartTotal();
-  });
+  })
 }
 
+function updateCartTotal() {
+  const cartItemContainer = document.querySelector('.list-cart');
+  const cartTables = cartItemContainer.querySelectorAll('.cart-table');
 
+  cartTables.forEach(cartTable => {
+    const cartItems = cartTable.querySelectorAll('.cart-item');
+
+    cartItems.forEach(cartItem => {
+      const priceElement = cartItem.querySelector('.cart-item-price');
+      const quantityElement = cartItem.querySelector('.cart-quantity-input');
+
+      const price = parseFloat(priceElement.innerText.replace('$', ''))
+      const quantity = quantityElement.value
+      console.log(price * quantity)
+    });
+  });
+}
 
 
 

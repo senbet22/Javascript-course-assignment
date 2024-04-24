@@ -120,7 +120,6 @@
     grid-template-rows: 40px 1fr 40px;
     transition: .5s;
     overflow: auto;
-    padding-bottom: 10px;
 }
 
 .cart-tab::-webkit-scrollbar {
@@ -148,7 +147,7 @@ body.showCart .container {
 .cart-tab button {
     background-color: #4E9FB3;
     border: none;
-    font-family: Poppins;
+    height: 30px;
     font-weight: 600;
     cursor: pointer;
 }
@@ -182,7 +181,7 @@ body.showCart .container {
 }
 
 .cart-info img {
-    width: 90px;
+    width: 70px;
 }
 
 .cart-info a {
@@ -192,7 +191,7 @@ body.showCart .container {
 th {
     text-align: left;
     padding: 10px;
-    color: #ff0000;
+    color: #000000;
     background: #4E9FB3;
     font-weight: 600;
     border-bottom: 2px solid;
@@ -217,17 +216,16 @@ td img {
     margin-right: 10px;
 }
 
-.total-price-row {
-    margin: 80px;
-
-}
-
 td:last-child {
     text-align: right;
 }
 
 
-
+@media (max-width:899px) {
+    .cart-tab {
+        max-height: 400px;
+    }
+}
 
 
 
