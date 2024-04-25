@@ -29,18 +29,6 @@
         <div class="logo flex">
             <a href="index.html"><img src="images/RainyDays_Logo.png"></a>
         </div>
-        <div class="navbar-icons flex">
-            <div class="magnifying-glass">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-            <div class="user">
-                <i class="fa-solid fa-user"></i>
-            </div>
-            <div class="cart-icon">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span>0</span>
-            </div>
-        </div>
     </nav>
 
     <!--Orange navigationbar-->
@@ -65,6 +53,18 @@
             </ul>
         </div>
         </div>
+        <div class="navbar-icons flex">
+            <div class="magnifying-glass">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="user">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>0</span>
+            </div>
+        </div>
     </nav>
 
 
@@ -76,17 +76,19 @@
     <section class="home">
 
         <template id="product">
-            <a href="../Javascript-course-assignment/product/index.html" class="row" id="jacket-api">
-                <img id="jacket-img" src="images/model9.jpg" alt="">
-                <div class="product-text">
-                    <h2>Light Feather</h2>
-                </div>
-                <div class="detail">
-                    <h3></h3>
-                    <p>$169.00</p>
-                    <button id="cart-btn-id" class="btn-add-to-cart">Add to Cart</button>
-                </div>
-            </a>
+            <div class="row">
+                <a href="../Javascript-course-assignment/product/index.html" id="jacket-api">
+                    <img id="jacket-img" src="images/model9.jpg" alt="">
+                    <div class="product-text">
+                        <h2>Light Feather</h2>
+                    </div>
+                    <div class="detail">
+                        <h3></h3>
+                        <p>$169.00</p>
+                    </div>
+                </a>
+                <button id="cart-button-id" class="btn-add-to-cart">Add to Cart</button>
+            </div>
         </template>
 
 
@@ -100,59 +102,39 @@
 
 
     <div class="cart-tab">
-        <h1 class="cart-title">Shopping Cart</h1>
+        <p class="cart-title">Shopping Cart</p>
         <div class="list-cart">
             <table class="cart-table">
-                <tr>
-                    <th>Product</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                </tr>
-                <tr class="cart-item">
-                    <td>
-                        <div class="cart-info">
-                            <img class="cart-item-img" src="../Javascript-course-assignment/images/model11.jpg">
-                            <div>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+
+                <template id="cart-item-template">
+                    <tr class="cart-item">
+                        <td>
+                            <div class="cart-info">
+                                <img class="cart-item-img" src="">
                                 <br>
-                                <p class="cart-item-title">Runner's High Large</p>
-                                <a href="#" class="remove-btn"><i class="fa-solid fa-xmark"></i> Remove</a>
+                                <p class="cart-item-title"></p>
+                                <div>
+                                    <button class="remove-btn">Remove</i></button>
+                                </div>
                             </div>
-                        </div>
-                    </td>
-                    <td><input class="cart-quantity-input" type="number" value="1"></td>
-                    <td class="cart-item-price">$89.00</td>
-                </tr>
-                <tr class="cart-item">
-                    <td>
-                        <div class="cart-info">
-                            <img class="cart-item-img" src="../Javascript-course-assignment/images/model11.jpg">
-                            <div>
-                                <br>
-                                <p class="cart-item-title">Runner's High Large</p>
-                                <a href="#" class="remove-btn"><i class="fa-solid fa-xmark"></i> Remove</a>
-                            </div>
-                        </div>
-                    </td>
-                    <td><input class="cart-quantity-input" type="number" value="1"></td>
-                    <td class="cart-item-price">$89.00</td>
-                </tr>
-                <tr class="cart-item">
-                    <td>
-                        <div class="cart-info">
-                            <img class="cart-item-img" src="../Javascript-course-assignment/images/model11.jpg">
-                            <div>
-                                <br>
-                                <p class="cart-item-title">Runner's High Large</p>
-                                <a href="#" class="remove-btn"><i class="fa-solid fa-xmark"></i> Remove</a>
-                            </div>
-                        </div>
-                    </td>
-                    <td><input class="cart-quantity-input" type="number" value="1"></td>
-                    <td class="cart-item-price">$89.00</td>
-                </tr>
+                        </td>
+                        <td><input class="cart-quantity-input" type="number" value="1"></td>
+                        <td class="cart-item-price"></td>
+                    </tr>
+
+                </template>
+
             </table>
+            <div class="cartItemContainer">
 
-
+            </div>
         </div>
 
 
@@ -163,16 +145,14 @@
                     <td class="cart-total">$89.00</td>
                 </tr>
             </table>
-
         </div>
-
-
-
         <div class="cartBtn">
             <button class="close">CLOSE</button>
             <button class="checkOut">Check Out</button>
         </div>
     </div>
+
+
 
 
 
