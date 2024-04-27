@@ -33,24 +33,45 @@ function displayProducts(products) {
     if (product.onSale) {
       pr.querySelector('.detail p').innerHTML = `<del>${product.price}</del> <span class="discounted-price">${product.discountedPrice}</span>`;
     } else {
-      pr.querySelector('.detail p').textContent = product.price;
+      pr.querySelector('.detail p').textContent = product.price.toFixed(2);
 
     }
     pr.querySelector('#jacket-img').src = product.image;
 
     pr.querySelector('#cart-button-id').onclick = () => {
       const cart = localStorage.getItem("cart")
-      if (cart == null) {
-        localStorage.setItem("cart", JSON.stringify([product]))
-      } else {
-        var parsedCart = JSON.parse(cart)
-        parsedCart = [...parsedCart, product]
-        localStorage.setItem("cart", JSON.stringify(parsedCart))
+      const parsedCart = cart ? JSON.parse(cart) : [];
+      const productExists = parsedCart.findIndex(item => item.id === product.id);
 
+      if (productExists !== -1) {
+
+        const doublePrice = product.onSale ? parseFloat(product.discountedPrice) : parseFloat(product.price);
+        parsedCart[productExists].price += doublePrice;
+      } else {
+        parsedCart.push(product);
       }
+
+      localStorage.setItem("cart", JSON.stringify(parsedCart))
 
       renderShoppingCart()
     }
+
+
+
+    const productLink = pr.querySelector('#jacket-api');
+    productLink.addEventListener('click', (event) => {
+      event.preventDefault(); // Prevents default behavior of <a> tag.
+
+
+      // Store product details in URL parameters
+      const url = new URL('../Javascript-course-assignment/product/index.html', window.location.href);
+      url.searchParams.append('title', product.title);
+      url.searchParams.append('description', product.description);
+      url.searchParams.append('price', product.price.toFixed(2));
+      url.searchParams.append('image', product.image);
+      // Links to the product page.
+      window.location.href = url.href;
+    });
     /* Appends alle the code above to HTML. */
     container.appendChild(pr);
 
@@ -114,7 +135,7 @@ function renderShoppingCart() {
       if (product.onSale) {
         pr.querySelector('.cart-item-price').innerHTML = `<del>${product.price}</del> <span class="discounted-price">${product.discountedPrice}</span>`;
       } else {
-        pr.querySelector('.cart-item-price').textContent = product.price;
+        pr.querySelector('.cart-item-price').textContent = product.price.toFixed(2);
 
       }
 
@@ -128,9 +149,9 @@ function renderShoppingCart() {
 
       // Checks if the item in Cart is on discount
       if (!product.onSale) {
-        totalPrice += parseFloat(product.price);
+        totalPrice += parseFloat(product.price.toFixed(2));
       } else {
-        totalPrice += parseFloat(product.discountedPrice);
+        totalPrice += parseFloat(product.discountedPrice.toFixed(2));
       }
     }
   }
@@ -140,9 +161,11 @@ function renderShoppingCart() {
 
   cartIconSpan.textContent = cartItemCount;
 }
+// Removes items from cart.
 function removeFromCart(productId) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   cart = cart.filter(item => item.id !== productId);
   localStorage.setItem("cart", JSON.stringify(cart));
   renderShoppingCart();
 }
+

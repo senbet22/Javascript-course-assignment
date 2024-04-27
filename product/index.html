@@ -17,6 +17,7 @@
     </style>
     <script src="https://kit.fontawesome.com/3ad74a7a32.js" crossorigin="anonymous"></script>
     <script type="module" src="../js/singleproduct.js"></script>
+    <script type="module" src="../script.js"></script>
 </head>
 
 <body>
@@ -26,19 +27,7 @@
         <div class="gradient">
         </div>
         <div class="logo flex">
-            <a href="index.html"><img src="images/RainyDays_Logo.png"></a>
-        </div>
-        <div class="navbar-icons flex">
-            <div class="magnifying-glass">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-            <div class="user">
-                <i class="fa-solid fa-user"></i>
-            </div>
-            <div class="cart-icon">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span>0</span>
-            </div>
+            <a href="../index.html"><img src="../images/RainyDays_Logo.png"></a>
         </div>
     </nav>
 
@@ -64,6 +53,18 @@
             </ul>
         </div>
         </div>
+        <div class="navbar-icons flex">
+            <div class="magnifying-glass">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="user">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>0</span>
+            </div>
+        </div>
     </nav>
 
 
@@ -74,41 +75,16 @@
     <section class="jacket">
         <div class="container">
             <div class="img-col">
-                <img src="../images/model1.jpg" id="MainImg" width="100%">
-                <div class="small-img-group">
-                    <div class="small-img-col">
-                        <img src="../images/model1.jpg" width="100%">
-                    </div>
-                    <div class="small-img-col">
-                        <img src="../images/model1.jpg" width="100%">
-                    </div>
-                    <div class="small-img-col">
-                        <img src="../images/model1.jpg" width="100%">
-                    </div>
-                    <div class="small-img-col">
-                        <img src="../images/model1.jpg" width="100%">
-                    </div>
-                </div>
+                <img src="#" id="MainImg" width="100%">
+
             </div>
 
             <div class="detail-col">
                 <h1>Runner's High</h1>
                 <h2>$89.00</h2>
-                <select>
-                    <option>Select Size</option>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                    <option>XXL</option>
-                </select>
-                <input type="number" value="1">
-                <a href="../checkout/index.html" class="btn">Add to cart</a>
-                <h3>Product Details:</h3>
-                <p><i class="fa-solid fa-check"></i> Waterproof and breathable</p>
-                <p><i class="fa-solid fa-check"></i> Lightweight and packable</p>
-                <p><i class="fa-solid fa-check"></i> advanced wind-resistant technology</p> <br>
-                <p> Introducing our cutting-edge RainGuard Pro <br> Waterproof Jacket, designed to redefine your
+                <button id="cart-button-id" class="btn-add-to-cart">Add to Cart</button>
+                <p class="product-details"> Introducing our cutting-edge RainGuard Pro <br> Waterproof Jacket, designed
+                    to redefine your
                     rainy-day experience.
                     This versatile jacket boasts a state-of-the-art waterproof membrane, ensuring you stay dry and
                     comfortable in the most challenging weather conditions. <br> <br>
@@ -125,51 +101,59 @@
         <div id="singleProduct">
 
         </div>
-
-
-        <!-- Featured products (You might also like this) -->
-
-        <div class="featured">
-            <h2>You might also like...</h2>
-            <div class="row">
-                <div class="featured-col">
-                    <img src="../images/model5.jpg">
-                    <h3>Midnight Blue</h3>
-                    <h5>cutting-edge RainGuard Pro <br> Waterproof Jacket</h5>
-                    <p>$149.00</p>
-                </div>
-
-                <div class="featured-col">
-                    <img src="../images/model10.jpg">
-                    <h3>Cold Rain</h3>
-                    <h5>cutting-edge RainGuard Pro <br> Waterproof Jacket</h5>
-                    <p>$149.00</p>
-                </div>
-
-                <div class="featured-col">
-                    <img src="../images/model2.jpg">
-                    <h3>Pacific blue</h3>
-                    <h5>cutting-edge RainGuard Pro <br> Waterproof Jacket</h5>
-                    <p>$89.00</p>
-                </div>
-
-                <div class="featured-col">
-                    <img src="../images/model7.jpg">
-                    <h3>Summer Rain</h3>
-                    <h5>cutting-edge RainGuard Pro <br> Waterproof Jacket</h5>
-                    <p>$119.00</p>
-                </div>
-
-            </div>
-
-
-
-        </div>
-
     </section>
 
 
+    <div class="cart-tab">
+        <p class="cart-title">Shopping Cart</p>
+        <div class="list-cart">
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
 
+                <template id="cart-item-template">
+                    <tr class="cart-item">
+                        <td>
+                            <div class="cart-info">
+                                <img class="cart-item-img" src="">
+                                <br>
+                                <p class="cart-item-title"></p>
+                                <div>
+                                    <button class="remove-btn">Remove</i></button>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input class="cart-quantity-input" type="number" value="1"></td>
+                        <td class="cart-item-price"></td>
+                    </tr>
+
+                </template>
+
+            </table>
+            <div class="cartItemContainer">
+
+            </div>
+        </div>
+
+
+        <div class="total-price">
+            <table class="total-price-row">
+                <tr>
+                    <td>Total</td>
+                    <td class="cart-total">$89.00</td>
+                </tr>
+            </table>
+        </div>
+        <div class="cartBtn">
+            <button class="close">CLOSE</button>
+            <button class="checkOut">Check Out</button>
+        </div>
+    </div>
 
 
 
