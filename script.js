@@ -38,7 +38,7 @@ function displayProducts(products) {
     }
     pr.querySelector('#jacket-img').src = product.image;
 
-    pr.querySelector('#cart-button-id').onclick = () => {
+    pr.querySelector('.btn-add-to-cart').onclick = () => {
       const cart = localStorage.getItem("cart")
       const parsedCart = cart ? JSON.parse(cart) : [];
       const productExists = parsedCart.findIndex(item => item.id === product.id);
@@ -50,7 +50,6 @@ function displayProducts(products) {
       } else {
         parsedCart.push(product);
       }
-
       localStorage.setItem("cart", JSON.stringify(parsedCart))
 
       renderShoppingCart()
@@ -129,6 +128,7 @@ function renderShoppingCart() {
     for (const product of parsedCart) {
       const template = document.querySelector('#cart-item-template');
       const pr = template.content.cloneNode(true);
+
       pr.querySelector('.cart-item-title').textContent = product.title;
       pr.querySelector('.cart-item-img').src = product.image;
 
@@ -138,6 +138,8 @@ function renderShoppingCart() {
         pr.querySelector('.cart-item-price').textContent = product.price.toFixed(2);
 
       }
+
+
 
       // Remove button in cart
       const removeButton = pr.querySelector('.remove-btn');
@@ -155,13 +157,13 @@ function renderShoppingCart() {
       }
     }
   }
-  // Displays total price.
+  // Displays total price with two decimals.
   const cartTotalElement = document.querySelector('.cart-total');
   cartTotalElement.textContent = '$' + totalPrice.toFixed(2);
 
   cartIconSpan.textContent = cartItemCount;
 }
-// Removes items from cart.
+// Removes items from cart/localStorage.
 function removeFromCart(productId) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   cart = cart.filter(item => item.id !== productId);
@@ -169,3 +171,17 @@ function removeFromCart(productId) {
   renderShoppingCart();
 }
 
+
+// If theres items in cart, takes you to checkout if not alert "Your cart i empty".
+const checkoutButton = document.querySelector('.checkOut');
+
+checkoutButton.addEventListener('click', () => {
+  const cart = localStorage.getItem("cart");
+  const parsedCart = cart ? JSON.parse(cart) : [];
+
+  if (parsedCart.length > 0) {
+    window.location.href = '../Javascript-course-assignment/checkout/index.html';
+  } else {
+    alert("Your Cart Is Empty");
+  }
+});
