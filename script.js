@@ -58,6 +58,9 @@ function displayProducts(products) {
       localStorage.setItem("cart", JSON.stringify(parsedCart))
 
       renderShoppingCart()
+
+      // Opens the cart everytime an Item is added.
+      body.classList.add('showCart');
     }
 
 
@@ -175,6 +178,25 @@ function renderShoppingCart() {
       pr.querySelector('.cart-item-title').textContent = product.title;
       pr.querySelector('.cart-item-img').src = product.image;
 
+      const sizeSelect = pr.querySelector('.cart-item-sizes');
+      sizeSelect.innerHTML = "";
+
+      // Imports sizes from API and puts them inside 'option' list. 
+      for (const size of product.sizes) {
+        const option = document.createElement('option');
+        option.value = size;
+        option.textContent = size;
+        sizeSelect.appendChild(option);
+      }
+      if (product.selectedSize) {
+        sizeSelect.value = product.selectedSize;
+      }
+      // Event listener that remmebers what size was selected.
+      sizeSelect.addEventListener('change', (event) => {
+        product.selectedSize = event.target.value;
+        updateLocalStorage(parsedCart);
+      });
+
       if (product.onSale) {
         pr.querySelector('.cart-item-price').innerHTML = `<del>${product.price.toFixed(2)}</del> <span class="discounted-price">${product.discountedPrice.toFixed(2)}</span>`;
       } else {
@@ -200,6 +222,7 @@ function renderShoppingCart() {
       }
     }
   }
+
   // Displays total price with two decimals.
   const cartTotalElement = document.querySelector('.cart-total');
   cartTotalElement.textContent = '$' + totalPrice.toFixed(2);
@@ -231,3 +254,7 @@ checkoutButton.addEventListener('click', () => {
   }
 });
 
+// Makes sure that cart data is always updated/remembered, f.eks if you select size.
+function updateLocalStorage(cart) {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
