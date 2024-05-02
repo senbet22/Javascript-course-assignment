@@ -32,6 +32,9 @@ table {
 
 }
 
+.cart-tab .cart-item {
+    width: 10%;
+}
 
 
 
@@ -157,11 +160,11 @@ td:last-child {
 
 /* cart----------------------------___________________-______-_-_____- */
 .cart-tab {
-    background-color: #FBF2E8;
-    color: #000000;
-    display: grid;
-    grid-template-rows: 40px 1fr 40px;
-    transition: .5s;
+    /* background-color: #FBF2E8;
+    color: #000000; */
+    /* display: grid; */
+    /* grid-template-rows: 40px 1fr 40px;
+    transition: .5s; */
 }
 
 

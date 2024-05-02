@@ -91,7 +91,7 @@ section {
     display: grid;
     grid-template-rows: 40px 1fr 40px;
     transition: .5s;
-    overflow: hidden;
+    overflow: auto;
     z-index: 9999;
 }
 

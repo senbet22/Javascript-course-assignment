@@ -23,13 +23,16 @@ function displayProducts(products) {
   const container = document.querySelector('.products');
   container.innerHTML = '';
 
+
   for (let i = 0; i < products.length; i++) {
     const product = products[i];
     const template = document.querySelector('#product');
     const pr = template.content.cloneNode(true);
 
+
     /* Imports Price from API and checks if a product is Discounted - Imports images from API to the clone div */
     pr.querySelector('h2').textContent = product.title;
+
     if (product.onSale) {
       pr.querySelector('.detail p').innerHTML = `<del>${product.price}</del> <span class="discounted-price">${product.discountedPrice}</span>`;
     } else {
@@ -38,18 +41,20 @@ function displayProducts(products) {
     }
     pr.querySelector('#jacket-img').src = product.image;
 
+
+
     pr.querySelector('.btn-add-to-cart').onclick = () => {
       const cart = localStorage.getItem("cart")
       const parsedCart = cart ? JSON.parse(cart) : [];
       const productExists = parsedCart.findIndex(item => item.id === product.id);
 
       if (productExists !== -1) {
-
-        const doublePrice = product.onSale ? parseFloat(product.discountedPrice) : parseFloat(product.price);
-        parsedCart[productExists].price += doublePrice;
+        parsedCart[productExists].price += parseFloat(product.price);
+        parsedCart[productExists].discountedPrice += parseFloat(product.discountedPrice);
       } else {
         parsedCart.push(product);
       }
+
       localStorage.setItem("cart", JSON.stringify(parsedCart))
 
       renderShoppingCart()
@@ -68,6 +73,7 @@ function displayProducts(products) {
       url.searchParams.append('description', product.description);
       url.searchParams.append('price', product.price.toFixed(2));
       url.searchParams.append('image', product.image);
+
       // Links to the product page.
       window.location.href = url.href;
     });
@@ -76,6 +82,43 @@ function displayProducts(products) {
 
   }
 }
+
+
+// The filtering interfered with the cart in product page so i mae this if statement to stop it from running on product page.
+if (window.location.pathname == '/Javascript-course-assignment/index.html') {
+
+  // This section filters what products are displayed based on gender.
+  function filterAndDisplayProducts() {
+    const selectElement = document.getElementById("list");
+    const selectedValue = selectElement.value;
+
+    // Fetch products based on the selected option
+    fetchProducts(PRODUCTS_URL)
+      .then(products => {
+        let filteredProducts = products;
+
+        if (selectedValue === "female") {
+          filteredProducts = products.filter(product => product.gender === 'Female');
+        } else if (selectedValue === "male") {
+          filteredProducts = products.filter(product => product.gender === 'Male');
+        }
+
+        // Calls the function function displayProducts and passes the filtered products.
+        displayProducts(filteredProducts);
+      })
+      .catch(error => {
+        console.error("Error fetching products:", error);
+      });
+  }
+
+  // event listener that is triggered based on change to the select: options.
+  document.getElementById("list").addEventListener("change", filterAndDisplayProducts);
+}
+
+
+
+
+
 
 async function initializeProducts() {
   const products = await fetchProducts(PRODUCTS_URL);
@@ -133,7 +176,7 @@ function renderShoppingCart() {
       pr.querySelector('.cart-item-img').src = product.image;
 
       if (product.onSale) {
-        pr.querySelector('.cart-item-price').innerHTML = `<del>${product.price}</del> <span class="discounted-price">${product.discountedPrice}</span>`;
+        pr.querySelector('.cart-item-price').innerHTML = `<del>${product.price.toFixed(2)}</del> <span class="discounted-price">${product.discountedPrice.toFixed(2)}</span>`;
       } else {
         pr.querySelector('.cart-item-price').textContent = product.price.toFixed(2);
 
@@ -163,6 +206,8 @@ function renderShoppingCart() {
 
   cartIconSpan.textContent = cartItemCount;
 }
+
+
 // Removes items from cart/localStorage.
 function removeFromCart(productId) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -185,3 +230,4 @@ checkoutButton.addEventListener('click', () => {
     alert("Your Cart Is Empty");
   }
 });
+
