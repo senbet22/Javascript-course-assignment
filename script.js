@@ -3,15 +3,28 @@ import { PRODUCTS_URL } from './settings.js';
 async function fetchProducts(url) {
 
   try {
+    showLoader()
     let response = await fetch(url);
+    await delay(800);
     if (!response.ok) throw new Error("Failed to fetch data from the API");
     let products = await response.json();
-    console.log(products);
+    hideLoader()
     return products;
   } catch (err) {
+    hideLoader()
     console.warn(err.message);
   }
 }
+function showLoader() {
+  const loader = document.querySelector('.loader');
+  loader.style.display = 'inline-block';
+}
+function hideLoader() {
+  const loader = document.querySelector('.loader');
+  loader.style.display = 'none';
+}
+
+function delay(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
 
 
 
@@ -254,7 +267,14 @@ checkoutButton.addEventListener('click', () => {
   }
 });
 
+
+
+
+
 // Makes sure that cart data is always updated/remembered, f.eks if you select size.
 function updateLocalStorage(cart) {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
+
+
+
