@@ -5,7 +5,7 @@ async function fetchProducts(url) {
   try {
     showLoader()
     let response = await fetch(url);
-    await delay(800);
+    // await delay(800);
     if (!response.ok) throw new Error("Failed to fetch data from the API");
     let products = await response.json();
     hideLoader()
@@ -15,6 +15,7 @@ async function fetchProducts(url) {
     console.warn(err.message);
   }
 }
+// Loader
 function showLoader() {
   const loader = document.querySelector('.loader');
   loader.style.display = 'inline-block';
